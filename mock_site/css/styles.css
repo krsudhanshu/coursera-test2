@@ -1,0 +1,184 @@
+body{
+	font-size: 16px;
+	color: #fff;
+	background-color: #36065f;
+	font-family: 'Oxygen', sans-serif;
+}
+
+#header-nav{
+	background-color: #110218;
+	border-radius: 0;
+	border:0;
+	margin-bottom: 5px;
+}
+
+#logo-img{
+	background: url('../images/logo.jpg') no-repeat;
+	width: 150px;
+	height: 150px;
+	margin: 10px 15px 10px 0;
+}
+
+.navbar-brand{
+	padding-top: 25px;
+} 
+
+.navbar-brand h1{
+	font-family: 'Lora', serif;
+	color: #e164e0;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #222;
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: 0.75;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus{
+	text-decoration: none;
+}
+
+.pull-left{
+	float:left;
+}
+
+#nav-list{
+	margin-top: 10px;
+}
+
+#nav-list a{
+	text-align: center;
+}
+
+#nav-list a span{
+	font-size: 1.2em;
+}
+
+#phone{
+	margin-top: 5px;
+}
+
+#phone a{
+	text-align: right;
+	padding-bottom: 0;
+}
+
+#phone a:hover, #phone a:focus{
+	text-decoration: none;
+	color: #fff;
+}
+
+#phone div{
+	color: #557c3e;
+	text-align: right;
+	font-size: 0.8em;
+}
+
+#call-btn{
+	text-align: center;
+	font-size: 2em;
+	background: #110218;
+	color: #fff;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#call-btn a:hover, #phone a:focus{
+	text-decoration: none;
+	color: #fff;
+}
+
+.jumbotron{
+	padding: 0;
+	margin-top: 30px;
+	box-shadow: 0 0 50px #110218;
+	border: 2px solid #110218;
+}
+
+#main-content{
+	box-shadow: 2px;
+}
+
+#menu-tile, #specials-tile, #map-tile{
+	width: 100%;
+	height: 250px;
+	margin-bottom: 15px;
+	position: relative;
+	border: 2px solid #110218;
+	overflow: hidden;
+}
+
+#menu-tile:hover, #specials-tile:hover, #map-tile:hover{
+	box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#menu-tile{
+	background: url('../images/menu_image.jpg') no-repeat;
+	background-position: center;
+}
+
+#specials-tile{
+	background: url('../images/movies.jpg') no-repeat;
+	background-position: center;
+}
+
+#menu-tile span, #specials-tile span, #map-tile span{
+	position: absolute;
+	bottom: 0;
+	right:0;
+	width:100%;
+	text-align: center;
+	font-size:1.6em;
+	text-transform: uppercase;
+	background-color: black;
+	color: #fff;
+	opacity:.6;
+}
+
+@media (max-width: 575px){
+	#menu-tile, #specials-tile{
+		width:360px;
+		margin: 0 auto 15px auto;
+	}
+}
+
+@media (max-width: 479px){
+	#menu-tile, #specials-tile{
+		width: 280px;
+		margin: 0 auto 15px;
+	}
+}
+
+
+/*footer */
+
+.panel-footer{
+	margin-top: 30px;
+	padding-top: 35px;
+	padding-bottom: 30px;
+	background-color: #222;
+	border-top: 0;
+}
+
+.panel-footer div.row{
+	margin-bottom: 35px;
+}
+
+#hours, #address{
+	line-height: 2;
+}
+
+#hours>span, #address> span{
+	font-size: 1.3em;
+}
+
+#address p{
+	color: #557c3e;
+	font-size: .8em;
+	line-height: 1.8;
+}
+
+#testimonials{
+	font-style: italic;
+}
