@@ -182,3 +182,36 @@ body{
 #testimonials{
 	font-style: italic;
 }
+
+/*anime-menu page */
+.anime-tile {
+	position: relative;
+	border: 2px solid #110218;
+	overflow: hidden;
+	width: 200px;
+	height: 200px;
+	margin: 0 auto 15px;
+}
+
+.anime-tile span {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	width: 100%;
+	text-align: center;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	background-color: #000;
+	color: #fff;
+	opacity: 0.7;
+}
+
+.anime-tile:hover {
+	box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#anime-title + div {
+	margin-bottom: 50px;
+}
+
+/* End of anime-menu */
