@@ -15,10 +15,11 @@ $(function(){
 (function (global) {
 
 	var dc={};
+	
 	var homeHtml = "snippets/home-snippet.html";
-	var allAnimeCategoriesUrl = "json/allanimecategories.json";
-	var allMovieCategoriesUrl = "json/allmoviecategories.json";
-	var categoryHtml = "snippets/categoty-snippet.html";
+	var allAnimeCategoriesUrl = "json/anime.json";
+	var allMovieCategoriesUrl = "json/movie.json";
+	var categoryHtml = "snippets/category-snippet.html";
 	var categoriesTitleHtml = "snippets/category-title-snippet.html";
 
 	var insertHtml = function(selector,html){
@@ -26,11 +27,25 @@ $(function(){
 		targetElem.innerHTML= html;
 	};
 
-	var switchMenuToActive = function(){
-		var classes = document.querySelector("#navMenuButton").className;
+	var switchMenuToActive = function(id){
+		var classes = document.querySelector("#navHomeButton").className;
+		classes = classes.replace(new RegExp("active", "g"), "");
+		document.querySelector("#navHomeButton").className = classes;
+
+		classes = document.querySelector("#navAnimeButton").className;
+		classes = classes.replace(new RegExp("active", "g"), "");
+		document.querySelector("#navAnimeButton").className = classes;
+
+		classes = document.querySelector("#navMovieButton").className;
+		classes = classes.replace(new RegExp("active", "g"), "");
+		document.querySelector("#navMovieButton").className = classes;
+
+
+		id ="#" + id;
+		classes = document.querySelector(id).className;
 		if(classes.indexOf("active")== -1){
 			classes +=" active";
-			document.querySelector("#navMenuButton").className = classes;
+			document.querySelector(id).className = classes;
 		}
 	};
 
@@ -51,7 +66,7 @@ $(function(){
 		  function (responseText) {
 		    document.querySelector("#main-content")
 		      .innerHTML = responseText;
-		  }
+		  },
 		  false);
 		});
 
@@ -71,7 +86,9 @@ $(function(){
 			$ajaxUtils.sendGetRequest(categoriesTitleHtml, function(categoriesTitleHtml){
 
 				$ajaxUtils.sendGetRequest(categoryHtml, function(categoryHtml){
-					switchMenuToActive();
+					id = categories[0].id;
+
+					switchMenuToActive(id);
 
 					var categoriesViewHtml = buildCategoriesView(categories,
 						categoriesTitleHtml,categoryHtml);
@@ -87,10 +104,13 @@ $(function(){
 		var finalHtml = categoriesTitleHtml;
 		finalHtml += "<section class='row'>";
 
-		for(var i=0;i<categories.length; i++){
+		//console.log(categories.anime.length);
+
+		for(var i=1;i<categories.length; i++){
 			var html = categoryHtml;
 			var name = "" + categories[i].name;
 			var short_name = categories[i].short_name;
+			html = insertProperty(html, "folder", categories[0].folder);
 			html = insertProperty(html, "name", name);
 			html = insertProperty(html, "short_name", short_name);
 			finalHtml += html;

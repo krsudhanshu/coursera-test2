@@ -1,0 +1,55 @@
+[
+	{
+		"folder" : "movies",
+		"id" : "navMovieButton"
+	},
+
+	{
+		"name" : "Catle in the Sky",
+		"short_name" : "CS",
+		"url" : ""
+	},
+
+	{
+		"name" : "Howl's Moving Castle",
+		"short_name" : "HC",
+		"url" : ""
+	},
+
+	{
+		"name" : "Your Name is",
+		"short_name" : "KM",
+		"url" : ""
+	},
+
+	{
+		"name" : "kiki delivery service",
+		"short_name" : "KS",
+		"url" : ""
+	},
+
+	{
+		"name" : "My neighbour Totoro",
+		"short_name" : "MT",
+		"url" : ""
+	},
+
+	{
+		"name" : "Spirited Away",
+		"short_name" : "SA",
+		"url" : ""
+	},
+
+	{
+		"name" : "Whisper of the Heart",
+		"short_name" : "WH",
+		"url" : ""
+	},
+
+	{
+		"name" : "Weathering with You",
+		"short_name" : "WW",
+		"url" : ""
+	}
+]
+

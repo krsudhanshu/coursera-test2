@@ -1,0 +1,52 @@
+ [
+    {
+      "folder": "anime",
+      "id" : "navAnimeButton"
+    },
+
+    {
+      "name": "Naruto",
+      "short_name": "N",
+      "url": ""
+    },
+    {
+      "name": "HUnter X Hunter",
+      "short_name": "X",
+      "url": ""
+    },
+    {
+      "name": "Attack on Titan",
+      "short_name": "A",
+      "url": ""
+    },
+    {
+      "name": "Code Geass",
+      "short_name": "C",
+      "url": ""
+    },
+    {
+      "name": "Death Note",
+      "short_name": "D",
+      "url": ""
+    },
+    {
+      "name": "Erased",
+      "short_name": "E",
+      "url": ""
+    },
+    {
+      "name": "FullMetal Alchemist",
+      "short_name": "F",
+      "url": ""
+    },
+    {
+      "name": "Haikyuu",
+      "short_name": "H",
+      "url": ""
+    },
+    {
+      "name": "My hero Academia",
+      "short_name": "M",
+      "url": ""
+    }
+  ]
