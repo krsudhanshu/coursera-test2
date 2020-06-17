@@ -1,12 +1,12 @@
 $(function(){
-	$("navbarToggle").blur(function(event){
-		var screenwidth= window.innerWidth;
-		if(screenwidth<768){
+	$("#navbarToggle").blur(function(event){
+		var screenwidth = window.innerWidth;
+		if(screenwidth < 768){
 			$("#navbarSupportedContent").collapse('hide');
 		}
 	});
 
-	$("navbarToggle").click(function(event){
+	$("#navbarToggle").click(function(event){
 		$(event.target).focus();
 	});
 
