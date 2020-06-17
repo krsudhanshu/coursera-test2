@@ -114,7 +114,7 @@ $(function(){
 			html = insertProperty(html, "folder", categories[0].folder);
 			html = insertProperty(html, "name", name);
 			html = insertProperty(html, "short_name", short_name);
-			html = '<a href=" '+ categories[i].url + '">'+ html +'</a>';
+			html = '<a href=" '+ categories[i].url + '" target = "_blank">'+ html +'</a>';
 			html = html + '</div>';
 			finalHtml += html;
 		}
