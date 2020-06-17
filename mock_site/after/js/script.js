@@ -107,17 +107,45 @@ $(function(){
 		//console.log(categories.anime.length);
 
 		for(var i=1;i<categories.length; i++){
-			var html = categoryHtml;
+			var html = '<div class="col-md-3 col-sm-4 col-xs-6">';
+			html += categoryHtml;
 			var name = "" + categories[i].name;
 			var short_name = categories[i].short_name;
 			html = insertProperty(html, "folder", categories[0].folder);
 			html = insertProperty(html, "name", name);
 			html = insertProperty(html, "short_name", short_name);
+			html = '<a href=" '+ categories[i].url + '">'+ html +'</a>';
+			html = html + '</div>';
 			finalHtml += html;
 		}
 		finalHtml += "</section>";
 		return finalHtml;
 	}
+
+	// To go to the anime page
+
+	// var sn;
+
+	// dc.loadAnimeMenuItems = function(short_name){
+	// 	//sn = short_name; 
+	// 	$ajaxUtils.sendGetRequest(allAnimeCategoriesUrl, toTheUrl);
+	// };
+
+	// dc.loadMovieMenuItems = function(short_name){
+	// 	//sn = short_name;
+	// 	$ajaxUtils.sendGetRequest(allMovieCategoriesUrl, toTheUrl);
+	// };
+
+	// function toTheUrl(categories){
+
+	// 	for(var i=1;i<categories.length;i++){
+	// 		var sn= categories[i].short_name;
+	// 		if(sn===short_name){
+
+	// 		}
+	// 	}
+	// }
+
 
 	global.$dc = dc;
 
