@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width , initial-scale=1">
+	<meta name="google-signin-client_id" content="528938768462-06n38o3aajb9ito8r930nvdk3aeioum1.apps.googleusercontent.com">
 	<title>Anime</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/styles.css">
@@ -47,9 +48,14 @@
 			        <a class="nav-link" href="#" onclick="$dc.loadMovieCategories();"><i class="fas fa-robot"></i> <br class="d-none d-md-block"> Movies</a>
 			      </li>
 			      <li id="phone" class="d-none d-md-block">
-			      	<a href="tel: 410-602-5008">
+			      	<!-- <a href="tel: 410-602-5008">
 			      		<span>410-602-5008</span>
 			      	</a><div>*Watch here</div> 
+			      </li>
+			      <li> -->
+			      	<div id="profileinfosm">
+			      	<div class="g-signin2" data-onsuccess="onSignIn"></div>
+			      </div>
 			      </li>
 			    </ul>
 			  </div>
@@ -57,10 +63,8 @@
 			</div>
 		</nav>
 	</header>
-	<div id="call-btn" class="d-block d-md-none">
-		<a href="tel: 410-602-5008">
-			<span>410-602-5008</span>
-      	</a>
+	<div class="d-md-none" id= "profileinfo">
+	<div class="g-signin2"  data-onsuccess="onSignIn" data-theme="light" data-width= "300" data-longtitle="true" ></div>
 	</div>
 
 	<div id="main-content" class="container">
@@ -98,6 +102,8 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/ajax-utils.js"></script>
 	<script src="js/script.js"></script>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+
 
 </body>
 

@@ -60,7 +60,7 @@ body{
 }
 
 #phone a{
-	text-align: right;
+	text-align: center;
 	padding-bottom: 0;
 }
 
@@ -75,13 +75,10 @@ body{
 	font-size: 0.8em;
 }
 
-#call-btn{
-	text-align: center;
-	font-size: 2em;
-	background: #110218;
-	color: #fff;
-	margin-top: 5px;
-	margin-bottom: 5px;
+
+.g-signin2> div{
+	width: 100%;
+	margin: 0 auto;
 }
 
 #call-btn a:hover, #phone a:focus{
@@ -215,3 +212,19 @@ body{
 }
 
 /* End of anime-menu */
+
+/* sign in styling*/
+
+.profileimage{
+	background-size: 32px 32px;
+	border: 0;
+	border-radius: 50%;
+	/*display: block;*/
+	margin: 0;
+	margin: 0 auto;
+	width: 32px;
+	height: 32px;
+	position: relative;
+	z-index: 0;
+	/*float: right;*/
+}

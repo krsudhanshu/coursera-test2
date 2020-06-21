@@ -12,6 +12,44 @@ $(function(){
 
 });
 
+// google sign in 
+
+function onSignIn(googleUser){
+	var profile = googleUser.getBasicProfile();
+	name = profile.getName();
+	img = profile.getImageUrl();
+	email = profile.getEmail();
+	var signinsnippet ="snippets/signin-snippet.html";
+
+	$ajaxUtils.sendGetRequest(signinsnippet, function(snippet){
+
+		var html = snippet;
+		html = html.replace(new RegExp("{{img}}", "g"), img);
+		var html1 = html;
+		var html2 = html;
+		html1 = html1.replace(new RegExp("{{info}}", "g"), "profileinfo");
+
+		document.getElementById('profileinfo').innerHTML = html1;
+
+		html2 = html2.replace(new RegExp("{{info}}","g"), "profileinfosm");
+		document.getElementById('profileinfosm').innerHTML = html2;
+
+	}, false);
+}
+
+// google sign out
+
+function signOut(){
+	var auth2 = gapi.auth2.getAuthInstance();
+	auth2.signOut().then(function () {
+		console.log("hello");
+		var html = document.getElementById
+		document.getElementById('profileinfo').innerHTML = "<div class='g-signin2'  data-onsuccess='onSignIn' data-theme='light' data-width= '300' data-longtitle='true' ></div>";
+		document.getElementById('profileinfosm').innerHTML = "<div class='g-signin2' data-onsuccess='onSignIn'></div>" + "sign in";
+	});
+}
+
+
 (function (global) {
 
 	var dc={};
